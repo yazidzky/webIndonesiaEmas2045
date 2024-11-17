@@ -22,11 +22,14 @@ main {
 h2 {
     font-family: 'Etna Sans Serif', sans-serif;
     overflow: visible;      /* Pastikan teks tidak terpotong */
-    line-height: 1.4;       /* Menjaga jarak antar baris teks */
+    line-height: 1.6;       /* Menjaga jarak antar baris teks */
     white-space: normal;    /* Pastikan teks bisa membungkus jika terlalu panjang */
     word-wrap: break-word;  /* Memastikan kata panjang bisa terpotong dengan baik */
     max-width: 100%;        /* Pastikan lebar elemen cukup untuk menampung teks */
+    letter-spacing: 0.05em; /* Menambah jarak antar huruf */
+    word-spacing: 0.1em;    /* Menambah jarak antar kata */
 }
+
 
 
 
