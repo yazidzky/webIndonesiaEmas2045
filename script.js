@@ -43,7 +43,7 @@ function showPillar(direction) {
   const pillars = document.querySelectorAll('.pillar');
 
   // Periksa apakah layar dalam kondisi mobile
-  if (window.innerWidth > 768) {
+  if (window.innerWidth > 1064) {
     pillars.forEach(pillar => pillar.classList.add('active')); // Tampilkan semua pilar di desktop
     return;
   }
@@ -96,7 +96,7 @@ function updateTargets(indexChange) {
 window.addEventListener('resize', () => {
   const pillars = document.querySelectorAll('.pillar');
 
-  if (window.innerWidth > 768) {
+  if (window.innerWidth > 1064) {
     // Tampilkan semua pilar di desktop
     pillars.forEach(pillar => pillar.classList.add('active'));
   } else {
