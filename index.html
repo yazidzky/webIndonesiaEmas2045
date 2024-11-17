@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indonesia Emas 2045</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Etna+Sans+Serif&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="splash-screen"></div>
+    <nav id="navbar">
+        <div class="logo"><img alt="Indonesian flag waving animation"  height="40" src="assets/INDONESIA EMAS LOGO.png" width="60"/></div>
+        <div class="navbar-toggle" id="navbarToggle" onclick="toggleMenu()">☰</div>
+        <div class="navbar-menu" id="navbarMenu">
+            <ul class="menu-list">
+                <li><a href="#hero">Beranda</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#map">Peta</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#direction">Arah Pembangunan</a></li>
+                <li><a href="#targets">Sasaran Utama</a></li>
+                <li><a href="#VISI">Visi</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="main-content" >
+        <div id="landing-page" >
+            <section id="hero" class="hero">
+                <div class="clouds"></div>
+                <h2>MASA DEPAN INDONESIA</h2>
+            </section>
+            <section id="about" class="about">
+                <h2>MENUJU INDONESIA EMAS 2045</h2>
+                <p>Indonesia Emas 2045 adalah visi untuk menjadikan Indonesia sebagai negara maju pada 100 tahun kemerdekaannya. Untuk mencapai sasaran tersebut, pemerintah telah menyusun Rencana Pembangunan Jangka Panjang Nasional (RPJPN) 2025-2045. Visi ini menekankan pada transformasi ekonomi, peningkatan infrastruktur, kualitas pendidikan, dan pengelolaan sumber daya alam yang berkelanjutan.</p>
+                
+                <div class="pillars-wrapper">
+                  <button class="scroll-btn prev-btn" onclick="showPillar(-1)">&#8249;</button>
+                  <div class="pillars">
+                    <div class="pillar active">
+                      <div class="flip-card" onclick="toggleFlip(this)">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front" style="background-image: url('assets/transfor\ eko.jpeg')">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Transformasi Ekonomi</h3>
+                            <p>Meningkatkan produktivitas dengan memperluas lapangan kerja dan memprioritaskan sektor strategis.</p>
+                          </div>
+                          <div class="flip-card-back">
+                            <h3>Transformasi Ekonomi - Detail</h3>
+                            <p>Fokus pada sektor manufaktur, agrikultur, dan energi untuk memperkuat perekonomian Indonesia.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="pillar">
+                      <div class="flip-card" onclick="toggleFlip(this)">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front" style="background-image: url('assets/infrastruktur.jpeg');">
+                            <i class="fas fa-road"></i>
+                            <h3>Infrastruktur dan Wilayah</h3>
+                            <p>Membangun infrastruktur fisik dan mengembangkan wilayah berbasis keunggulan lokal.</p>
+                          </div>
+                          <div class="flip-card-back">
+                            <h3>Infrastruktur dan Wilayah - Detail</h3>
+                            <p>Pembangunan jalan, transportasi publik, dan energi hijau untuk mendukung ekonomi yang berkelanjutan.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="pillar">
+                      <div class="flip-card" onclick="toggleFlip(this)">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front" style="background-image: url('assets/pendidikan.jpeg');">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>Pendidikan</h3>
+                            <p>Menyiapkan pendidikan berbasis teknologi untuk meningkatkan keterampilan digital dan sains.</p>
+                          </div>
+                          <div class="flip-card-back">
+                            <h3>Pendidikan - Detail</h3>
+                            <p>Meningkatkan akses pendidikan di seluruh pelosok negeri dengan menekankan penguasaan matematika dan teknologi.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="pillar">
+                      <div class="flip-card" onclick="toggleFlip(this)">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front" style="background-image: url('assets/sumber\ daya\ alam.jpeg');">
+                            <i class="fas fa-leaf"></i>
+                            <h3>Pengelolaan Sumber Daya Alam</h3>
+                            <p>Melakukan pengelolaan sumber daya alam secara berkelanjutan dan mengoptimalkan kekayaan mineral.</p>
+                          </div>
+                          <div class="flip-card-back">
+                            <h3>Pengelolaan Sumber Daya Alam - Detail</h3>
+                            <p>Transisi energi dan konservasi lingkungan sebagai respons terhadap perubahan iklim global.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="scroll-btn next-btn" onclick="showPillar(1)">&#8250;</button>
+                </div>
+              </section>
+              
+              
+            <section id="map" class="map">
+            </section>
+            <section id="timeline" class="timeline">
+                <h2>TIMELINE PERJALANAN</h2>
+                <div class="events">
+                    <div class="event" style="background-image: url('assets/1945.png');">
+                        <h3>1945</h3>
+                        <p>Proklamasi Kemerdekaan Indonesia.</p>
+                    </div>
+                    <div class="event" style="background-image: url('assets/1965.png');">
+                        <h3>1965</h3>
+                        <p>Gerakan 30 September dan perubahan politik besar.</p>
+                    </div>
+                    <div class="event" style="background-image: url('assets/1998.png');">
+                        <h3>1998</h3>
+                        <p>Reformasi dan jatuhnya rezim Orde Baru.</p>
+                    </div>
+                    <div class="event" style="background-image: url(assets/2020.png);">
+                        <h3>2020</h3>
+                        <p>Pandemi COVID-19 dan upaya pemulihan ekonomi.</p>
+                    </div>
+                    <div class="event" style="background-image: url('assets/2045.png');">
+                        <h3>2045</h3>
+                        <p>Indonesia Emas: Menjadi negara maju dan sejahtera.</p>
+                    </div>
+                </div>
+            </section>
+            <section id="direction" class="direction">
+                <h2>PEMBANGUNAN UNTUK MENCAPAI INDONESIA EMAS</h2>
+                <p>Untuk mencapai sasaran ini, pemerintah telah merancang Rencana Pembangunan Jangka Panjang Nasional (RPJPN) 2025-2045. Beberapa inisiatif utama yang akan dijalankan antara lain:</p>
+                <section id="direction" class="direction">
+                    <button class="scroll-btn prev-btn" onclick="showPillar(-1)">&#8249;</button>
+                    <div class="targets">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <i class="fas fa-cogs"></i>
+                                    <h3>Reformasi Tata Kelola Pemerintahan</h3>
+                                    <p>Meningkatkan efisiensi birokrasi dan membangun kolaborasi lintas sektor antara pemerintah, swasta, dan masyarakat.</p>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h3>Reformasi Tata Kelola Pemerintahan - Detail</h3>
+                                    <p>Digitalisasi pelayanan publik, pengurangan tumpang tindih regulasi, dan peningkatan transparansi serta akuntabilitas pemerintah.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <i class="fas fa-book-open"></i>
+                                    <h3>Peningkatan Kualitas Pendidikan</h3>
+                                    <p>Integrasi teknologi dalam pendidikan, fokus pada STEM, dan peningkatan akses pendidikan berkualitas.</p>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h3>Peningkatan Kualitas Pendidikan - Detail</h3>
+                                    <p>Memperkenalkan teknologi dalam kurikulum, menyediakan pendidikan berkualitas di seluruh wilayah, serta meningkatkan keahlian vokasional untuk tenaga kerja masa depan.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <i class="fas fa-location-arrow"></i>
+                                    <h3>Pembangunan Wilayah Strategis</h3>
+                                    <p>Optimalisasi potensi geografis Indonesia dan pemberdayaan wilayah timur untuk pembangunan ekonomi.</p>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h3>Pembangunan Wilayah Strategis - Detail</h3>
+                                    <p>Pembangunan kawasan ekonomi khusus, pusat logistik, serta investasi sektor unggulan seperti pariwisata dan perikanan di wilayah timur Indonesia.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <i class="fas fa-laptop-code"></i>
+                                    <h3>Mendorong Ekosistem Digital dan Start-Up</h3>
+                                    <p>Memperkuat wirausaha digital dan menyiapkan infrastruktur digital yang mendukung perkembangan ekonomi digital.</p>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h3>Mendorong Ekosistem Digital dan Start-Up - Detail</h3>
+                                    <p>Memberikan dukungan pembiayaan, pengembangan pasar untuk start-up, dan membangun infrastruktur digital, seperti jaringan 5G di seluruh Indonesia.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <i class="fas fa-solar-panel"></i>
+                                    <h3>Pembangunan Energi Hijau</h3>
+                                    <p>Transisi menuju energi terbarukan untuk mencapai ketahanan energi dan pengurangan emisi karbon.</p>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h3>Pembangunan Energi Hijau - Detail</h3>
+                                    <p>Peningkatan penggunaan pembangkit listrik tenaga surya, angin, dan bioenergi, serta pengurangan ketergantungan pada bahan bakar fosil untuk mencapai emisi karbon nol bersih pada 2060.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="scroll-btn next-btn" onclick="showPillar(1)">&#8250;</button>
+                </section>
+            </section>
+            
+            
+            
+            
+            <section id="targets" class="direction">
+                <h2>SASARAN UTAMA UNTUK MEWUJUDKAN INDONESIA EMAS 2045</h2>
+                <div class="targets-container">
+                    <button class="scroll-btn prev-btn" onclick="showPillar(-1)">&#8249;</button>
+                    <div class="targets">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <i class="fas fa-chart-line"></i>
+                                <h3>Ekonomi yang Berdaya Saing Tinggi</h3>
+                                <p>Pertumbuhan ekonomi yang stabil, diversifikasi ekonomi, dan pengurangan ketergantungan pada sumber daya alam.</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Ekonomi yang Berdaya Saing Tinggi - Detail</h3>
+                                <p>Target pertumbuhan ekonomi 6-7% per tahun dan pendapatan per kapita USD 30.300 pada 2045. Mendorong industrialisasi berbasis teknologi dan inovasi.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <i class="fas fa-user-graduate"></i>
+                                <h3>SDM Berkualitas Tinggi</h3>
+                                <p>Peningkatan kualitas pendidikan dan pelatihan vokasi untuk menciptakan tenaga kerja yang produktif dan kompetitif.</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>SDM Berkualitas Tinggi - Detail</h3>
+                                <p>Memanfaatkan bonus demografi dengan pendidikan yang merata dan meningkatkan kesejahteraan melalui akses kesehatan, pendidikan, dan perlindungan sosial.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <i class="fas fa-road"></i>
+                                <h3>Infrastruktur dan Pembangunan Wilayah</h3>
+                                <p>Pembangunan infrastruktur yang mendukung konektivitas dan transisi energi terbarukan.</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Infrastruktur dan Pembangunan Wilayah - Detail</h3>
+                                <p>Pembangunan infrastruktur seperti jalan tol, pelabuhan, dan transportasi massal. Mendorong penggunaan energi ramah lingkungan seperti tenaga surya, angin, dan geotermal.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <i class="fas fa-lightbulb"></i>
+                                <h3>Transformasi Teknologi dan Inovasi</h3>
+                                <p>Adopsi teknologi digital dan riset untuk mendukung daya saing ekonomi dan efisiensi sektor publik.</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Transformasi Teknologi dan Inovasi - Detail</h3>
+                                <p>Investasi dalam riset dan pengembangan teknologi strategis seperti kecerdasan buatan dan energi bersih untuk mendukung digitalisasi dan inovasi.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <i class="fas fa-leaf"></i>
+                                <h3>Pembangunan Berkelanjutan</h3>
+                                <p>Pengelolaan sumber daya alam yang berkelanjutan dan pengurangan emisi karbon untuk menghadapi perubahan iklim.</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Pembangunan Berkelanjutan - Detail</h3>
+                                <p>Optimalisasi sumber daya alam untuk nilai tambah industri dan implementasi kebijakan mitigasi perubahan iklim untuk ketahanan lingkungan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="scroll-btn next-btn" onclick="showPillar(1)">&#8250;</button>
+                </div>
+                
+            </section>
+            <section id="VISI" class="visi">
+                 <div class="button-container">
+                <button class="button active" onclick="showVideo('https://www.youtube.com/embed/PX2BHNylSkE?si=8548dUa-B7UKW1SJ', this)">Visi Indonesia Emas 2045</button>
+                <button class="button" onclick="showVideo('https://www.youtube.com/embed/TR-cmoaNj0I?si=bY_Tk5iaXqE50a_c', this)">Peluncuran Rancangan Akhir RPJPN 2025–2045</button>
+            </div>
+            <div class="video-container">
+                <iframe id="video-frame" src="https://www.youtube.com/embed/PX2BHNylSkE?si=8548dUa-B7UKW1SJ" title="Visi Indonesia Emas 2045"></iframe>
+            </div>
+        </section>
+            <section id="FOOTER" class="FOOTER">
+            </section>
+        </div>
+    </div>
+    
+    
+   
+    <script src="script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,1266 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+body {
+    margin-top: 20px; /* Sesuaikan dengan tinggi nav */
+}
+
+/* Alternatif dengan menggunakan 'calc()' untuk lebih fleksibel */
+main {
+    padding-top: calc(60px + 60px); /* Menambahkan ruang sesuai dengan tinggi nav dan padding */
+}
+
+/* Mengimpor font Etna Sans Serif menggunakan format .ttf */
+@font-face {
+    font-family: 'Etna Sans Serif';
+    src: url('assets/Etna-Font/etna-free-font.otf') format('opentype');
+}
+
+h2 {
+    font-family: 'Etna Sans Serif', sans-serif;
+    overflow: visible;      /* Pastikan teks tidak terpotong */
+    line-height: 1.4;       /* Menjaga jarak antar baris teks */
+    white-space: normal;    /* Pastikan teks bisa membungkus jika terlalu panjang */
+    word-wrap: break-word;  /* Memastikan kata panjang bisa terpotong dengan baik */
+    max-width: 100%;        /* Pastikan lebar elemen cukup untuk menampung teks */
+}
+
+
+
+nav {
+    background: linear-gradient(to right, #ff0000, #d37319);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+nav .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+header {
+    position: relative;
+    background: linear-gradient(to right, #ff0000, #ffffff);
+    color: white;
+    text-align: center;
+    padding: 100px 0 50px 0;
+    overflow: hidden;
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+    animation: fadeIn 2s ease-in-out;
+    background: linear-gradient(to right, #efecec, #fdca00e9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+@keyframes flagWave {
+    0% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(10px); }
+    100% { transform: translateX(-50%) translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('https://placehold.co/1920x1080?text=Futuristic+City+Illustration&bg=000000&fg=ffffff') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+
+.hero .clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('assets/BACKGROUND\ FULL.webp')  no-repeat center center fixed;
+    background-size: cover;
+    animation: moveClouds 30s linear infinite;
+}
+
+@keyframes moveClouds {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 0; }
+}
+
+.hero h2 {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 2.5em;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+    font-family: 'Etna Sans Serif', sans-serif;
+
+    /* Gradient pada teks */
+    background: white;
+    -webkit-background-clip: text; /* Untuk browser berbasis Webkit seperti Chrome, Safari */
+    background-clip: text; /* Untuk browser lainnya */
+    -webkit-text-fill-color: transparent; /* Membuat warna teks transparan agar gradient bisa terlihat */
+    
+    /* Bayangan pada teks untuk efek kedalaman */
+    /* text-shadow: 0 -4px 8px rgba(0, 0, 0, 0.6); Bayangan ke atas */
+}
+
+.about {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.about h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #ff0000, #ffcc00);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* text-shadow: 0 -4px 8px rgba(0, 0, 0, 0.6); */
+}
+
+/* Responsif untuk layar lebih kecil */
+@media (max-width: 768px) {
+    .about h2 {
+        font-size: 1.8em; /* Menurunkan ukuran font pada layar lebih kecil */
+        /* text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); Menyesuaikan bayangan */
+    }
+}
+
+@media (max-width: 480px) {
+    .about h2 {
+        font-size: 1.5em; /* Ukuran font lebih kecil untuk layar ponsel */
+        /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); Bayangan lebih kecil */
+    }
+}
+
+
+.about p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.pillars {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.pillar {
+    width: 200px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    perspective: 1000px;
+}
+
+.pillar:hover {
+    transform: rotateY(0deg) scale(1.1);
+}
+
+.pillar i {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.pillar h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.map {
+    position: relative;
+    height: 600px; /* Anda bisa menggunakan vh untuk membuat tinggi lebih fleksibel */
+    background: url('assets/MAP TRANSPARENT.png') no-repeat center center;
+    background-size: cover; /* Pastikan gambar menutupi seluruh area */
+}
+
+/* Responsif untuk perangkat mobile */
+@media (max-width: 768px) {
+    .map {
+        height: 400px; /* Menurunkan tinggi pada perangkat mobile */
+        background-size: contain; /* Agar gambar sepenuhnya terlihat tanpa terpotong */
+        background-position: center center; /* Memastikan gambar tetap terpusat */
+    }
+}
+
+/* Responsif untuk layar yang lebih kecil, misalnya ponsel dengan layar sangat kecil */
+@media (max-width: 480px) {
+    .map {
+        height: 300px; /* Mengurangi tinggi lebih lanjut untuk layar kecil */
+        background-size: contain; /* Pastikan gambar sepenuhnya terlihat tanpa terpotong */
+        background-position: center center; /* Menjaga gambar tetap terpusat */
+    }
+}
+
+
+.FOOTER {
+    position: relative;
+    height: 300px;
+    background: url('assets/LOGO FOOTER.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0; /* Mulai dengan transparansi 0 */
+    transform: translateY(50px); /* Mulai dari posisi bawah */
+    animation: slideIn 1s ease-out forwards; /* Menambahkan animasi */
+}
+
+/* Definisikan animasi slideIn */
+@keyframes slideIn {
+    0% {
+        opacity: 0; /* Mulai dengan transparansi 0 */
+        transform: translateY(50px); /* Mulai dari bawah */
+    }
+    100% {
+        opacity: 1; /* Akhirnya tampil dengan transparansi 1 */
+        transform: translateY(0); /* Bergerak ke posisi normal */
+    }
+}
+
+/* Responsif untuk layar lebih kecil */
+@media (max-width: 768px) {
+    .FOOTER {
+        height: 300px;
+        background-position: center top;
+    }
+}
+
+/* Responsif untuk layar yang lebih kecil */
+@media (max-width: 480px) {
+    .FOOTER {
+        height: 100px;
+    }
+}
+
+
+* {
+    box-sizing: border-box; /* Pastikan padding dan border dihitung dalam total ukuran elemen */
+}
+
+.timeline {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    width: 100%; /* Pastikan timeline mengisi seluruh lebar kontainer */
+    max-width: 1200px; /* Batasi lebar maksimal agar tidak terlalu lebar */
+    margin: 0 auto; /* Posisikan di tengah */
+}
+#timeline h2 {
+    font-size: 36px; /* Ukuran teks utama */
+    /* text-shadow: 0 -4px 8px rgba(0, 0, 0, 0.6); Bayangan ke atas */
+}
+
+
+.timeline h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #ff0000, #ffcc00);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.timeline .events {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline .event {
+    width: 100%; /* Pastikan elemen mengisi lebar penuh kontainer */
+    max-width: 800px; /* Batasi lebar jika diperlukan */
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    perspective: 1000px;
+    background-size: cover; /* Gambar mengisi seluruh elemen */
+    background-position: center center; /* Posisi gambar di tengah */
+    background-repeat: no-repeat; /* Gambar tidak diulang */
+    color: white; /* Teks agar kontras dengan gambar */
+}
+
+
+.timeline .event h3, .timeline .event p {
+    position: relative; /* Memastikan teks tampil di atas gambar */
+    z-index: 1; /* Menjamin teks tetap di atas gambar */
+}
+
+
+.timeline .event:hover {
+    transform: scale(1.05);
+    background-color: #e0e0e0;
+}
+
+/* Make the timeline responsive on smaller screens */
+@media (max-width: 768px) {
+    .timeline {
+        padding: 30px 15px;
+    }
+
+    .timeline h2 {
+        font-size: 1.5em;
+    }
+
+    .timeline .event {
+        width: 95%; /* Sesuaikan dengan ukuran layar */
+        margin: 15px 0;
+        padding: 15px;
+    }
+
+    .timeline .events {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline {
+        padding: 20px 10px;
+    }
+
+    .timeline h2 {
+        font-size: 1.2em;
+    }
+
+    .timeline .event {
+        width: 100%; /* Gunakan seluruh lebar layar */
+        margin: 10px 0;
+        padding: 10px;
+    }
+}
+
+
+.direction {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.direction h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #ff0000, #ffcc00);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* text-shadow: 0 -4px 8px rgba(0, 0, 0, 0.6); Bayangan ke atas */
+}
+
+.direction p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.targets {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* #targets h2 { Ukuran teks utama */
+    /* text-shadow: 0 -4px 8px rgba(0, 0, 0, 0.6); Bayangan ke atas */
+/* } */
+.target {
+    width: 200px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    perspective: 1000px;
+}
+
+.target:hover {
+    transform: rotateY(180deg) scale(1.1);
+}
+
+.target i {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.target h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.cta {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to right, #ff0000, #ffffff);
+    color: rgb(250, 0, 0);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.cta button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 5px #ffcc00; }
+    50% { box-shadow: 0 0 20px #ffcc00; }
+    100% { box-shadow: 0 0 5px #ffcc00; }
+}
+
+/* Responsif Mobile */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
+
+    .pillars, .targets {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pillar, .target {
+        width: 80%;
+    }
+
+    .timeline .event {
+        width: 100%;
+    }
+
+    .cta button {
+        font-size: 1em;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+.navbar-menu {
+    display: flex; /* Tampilkan menu dalam bentuk flex di desktop */
+}
+
+.navbar-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navbar-toggle {
+    display: none; /* Sembunyikan toggle secara default */
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.flip-container {
+    perspective: 1000px;
+    margin: 20px;
+}
+
+.flipper {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+}
+
+.front {
+    background-color: #007bff;
+}
+
+.back {
+    background-color: #28a745;
+    transform: rotateY(180deg);
+}
+
+.flip-container.flipped .flipper {
+    transform: rotateY(180deg);
+}
+
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none; /* Sembunyikan menu di mobile */
+        flex-direction: column; /* Menu vertikal */
+    }
+
+    /* Style untuk navbar menu */
+.navbar-menu {
+    display: none; /* Sembunyikan menu secara default */
+    position: absolute;
+    top: 50px; /* Posisikan menu di bawah navbar */
+    left: 0;
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    z-index: 1000; /* Pastikan menu berada di atas elemen lain */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Memberikan sedikit bayangan */
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.navbar-menu.active {
+    display: flex; /* Tampilkan menu saat active */
+}
+
+/* Style untuk item dalam menu */
+.navbar-menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    font-size: 18px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-menu a:hover {
+    background-color: #555;
+}
+
+/* Styling untuk hamburger icon */
+/* Styling untuk hamburger icon */
+.navbar-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 1100; /* Agar tetap di atas navbar menu */
+    position: relative; /* Menambahkan relative positioning */
+    top: -10px; /* Geser ke atas */
+}
+
+.hamburger-icon {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+/* Jika menu aktif, kita ubah tampilan hamburger icon */
+.navbar-toggle.active .hamburger-icon {
+    transform: rotate(45deg); /* Putar 45 derajat untuk membuat 'X' */
+}
+
+.navbar-toggle.active .hamburger-icon:before {
+    transform: rotate(-90deg); /* Tambahkan garis horizontal untuk membentuk X */
+}
+
+.navbar-toggle.active .hamburger-icon:after {
+    transform: rotate(90deg); /* Tambahkan garis horizontal untuk membentuk X */
+}
+
+.navbar-toggle .hamburger-icon:before,
+.navbar-toggle .hamburger-icon:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggle .hamburger-icon:before {
+    top: -8px;
+}
+
+.navbar-toggle .hamburger-icon:after {
+    top: 8px;
+}
+
+/* Responsif - Tampilan mobile (lebih kecil dari 768px) */
+@media (max-width: 768px) {
+    .navbar-toggle {
+        top: -10px; /* Geser ke atas hanya pada tampilan mobile */
+    }
+    /* Navbar saat dalam tampilan mobile */
+    .navbar-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        padding-top: 60px;
+    }
+
+    .navbar-menu a {
+        padding: 15px;
+        font-size: 22px;
+        border-bottom: 1px solid #444;
+    }
+
+    .navbar-menu a:last-child {
+        border-bottom: none;
+    }
+}
+
+
+    .navbar-toggle {
+        display: block; /* Tampilkan toggle di mobile */
+    }
+
+    .navbar-menu a {
+        display: block; /* Menu item sebagai block di mobile */
+        padding: 10px;
+    }
+}
+
+/* Flip card container */
+.flip-card {
+    background-color: transparent;
+    width: 200px;
+    height: 300px;
+    perspective: 1000px; /* Provides depth for the 3D effect */
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+/* Flip card inner container */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+/* Front and back of the card */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back side when not facing */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Front side styles */
+.flip-card-front {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.flip-card-front i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #ff5722;
+}
+
+.flip-card-front h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #444;
+}
+
+.flip-card-front p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Back side styles */
+.flip-card-back {
+    background-color: #ff5722;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg); /* Apply rotation to flip the card */
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Specific styles for targets section */
+.targets .flip-card-back h3,
+.targets .flip-card-back p {
+    transform: rotateY(0deg); /* Ensure text is upright in the targets section */
+}
+
+.targets .flip-card-back h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.targets .flip-card-back p {
+    font-size: 14px;
+    color: #ffe0b2;
+}
+
+/* Specific styles for pillars section */
+.pillars .flip-card-back h3,
+.pillars .flip-card-back p {
+    transform: rotateY(0deg); /* Ensure text is upright in the pillars section */
+}
+
+.pillars .flip-card-back h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.pillars .flip-card-back p {
+    font-size: 14px;
+    color: #ffe0b2;
+}
+
+/* Trigger flip effect */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg); /* Posisi awal */
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg); /* Animasi flip saat hover */
+}
+
+
+nav {
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  .logo {
+    font-size: 24px;
+    color: #fff;
+    display: inline-block;
+  }
+  
+  .navbar-toggle {
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .navbar-menu {
+    display: block;
+  }
+  
+  .menu-list {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .menu-list li {
+    margin-right: 0px;
+  }
+  
+  .menu-list li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+  }
+  
+  .menu-list li a:hover {
+    background-color: #5b5555;
+  }
+  
+  /* Scrollable Horizontal Menu */
+  .navbar-menu {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  }
+  
+  .menu-list {
+    flex-wrap: nowrap;
+  }
+  
+  .menu-list li {
+    flex: 0 0 auto;
+  }
+  
+  /* Responsif: Pengaturan Menu untuk Perangkat Mobile */
+  @media (max-width: 768px) {
+    .menu-list {
+      display: block;
+      padding: 0;
+    }
+  
+    .menu-list li {
+      margin-bottom: 10px;
+    }
+  
+    .navbar-toggle {
+      display: block;
+    }
+  
+    .navbar-menu {
+      display: none;
+    }
+  
+    .navbar-menu.active {
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .menu-list li a {
+      font-size: 16px;
+      padding: 8px 15px;
+    }
+  }
+
+/* General styling */
+
+
+/* Navbar styling */
+#navbar {
+   
+    z-index: 9998; /* Pastikan navbar tetap di atas konten */
+    opacity: 0;  /* Navbar disembunyikan */
+}
+
+/* Navbar links */
+
+/* Splash Screen */
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f00, #fff, #ffd700); /* Gradasi merah putih emas */
+    color: white;
+    font-size: 2.5em;
+    font-weight: bold;
+    z-index: 9999;
+    opacity: 1;
+    animation: splashFadeIn 3s, splashFadeOut 2s 3s forwards; /* Animasi masuk 3 detik, keluar 2 detik */
+}
+
+#splash-screen {
+    background-image: 
+        url('assets/LOGO TRANSPARENT.png'), /* Gambar logo */
+        linear-gradient(to bottom, #560c03, #ffffff); /* Gradasi vertikal */
+    background-size: contain, cover; /* Menyesuaikan gambar logo agar muat dan menutupi latar belakang */
+    background-position: center; /* Menyelaraskan gambar di tengah */
+    background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+    height: 100vh; /* Mengatur tinggi div sesuai dengan tinggi layar */
+}
+
+
+/* Animation untuk splash screen masuk */
+@keyframes splashFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animation untuk splash screen keluar */
+@keyframes splashFadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Main Content (hidden initially) */
+#main-content {
+    display: none;
+}
+
+#splash-screen h1 {
+    font-family: 'Arial', sans-serif; /* Ganti dengan font yang diinginkan */
+    font-size: 1.8em; /* Ukuran font lebih besar */
+    font-weight: bold; /* Menebalkan font */
+    background-image: linear-gradient(45deg, #FFD700, #FF4500, #32CD32); /* Gradiasi dari emas, oranye, hijau */
+    --webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* Membuat teks transparan sehingga gradiasi terlihat */
+    text-align: center; /* Menyusun teks di tengah */
+    letter-spacing: 2px; /* Menambah jarak antar huruf untuk tampilan lebih elegan */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Efek bayangan gelap untuk menambah kontras */
+}
+
+
+
+/* Default styling */
+.about .pillars-wrapper {
+    position: relative;
+  }
+  
+  .about .pillars {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+  .about .pillar {
+    display: none; /* Default hidden */
+    flex: 1 1 100%;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .about .pillar.active {
+    display: block; /* Show only the active pillar */
+  }
+  
+  /* Buttons for navigation */
+  .about .scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 0.5rem;
+    z-index: 10;
+    cursor: pointer;
+  }
+  
+  .about .scroll-btn.prev-btn {
+    left: 0;
+  }
+  
+  .about .scroll-btn.next-btn {
+    right: 0;
+  }
+  
+  /* Mobile-specific styles */
+  @media (max-width: 768px) {
+    .about .pillar {
+      flex: 1 1 100%;
+    }
+  }
+  
+/* Default: Desktop styles */
+.about .pillar {
+  display: block; /* Semua pilar terlihat */
+}
+
+.about .scroll-btn {
+  display: none; /* Tombol navigasi disembunyikan di desktop */
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .about .pillar {
+    display: none; /* Sembunyikan semua pilar */
+  }
+
+  .about .pillar.active {
+    display: block; /* Tampilkan hanya pilar aktif */
+  }
+
+  .about .scroll-btn {
+    display: block; /* Tampilkan tombol navigasi */
+  }
+}
+
+
+/* Default styling */
+
+    .direction .targets {
+        display: flex;
+        flex-wrap: wrap; /* Pastikan elemen tidak menumpuk */
+        gap: 1rem; /* Tambahkan jarak antar elemen */
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* Default gaya flip-card */
+  /* Default styling */
+.direction .flip-card {
+    display: flex; /* Tampilkan elemen secara default */
+    flex: 1 1 100%;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+.direction .flip-card.active {
+    display: flex; /* Show only the active card */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.direction .flip-card-inner {
+    perspective: 1000px;
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    transition: transform 0.6s;
+}
+
+.direction .flip-card-front,
+.direction .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+
+}
+
+.direction .flip-card-front {
+    z-index: 2;
+}
+
+.direction .flip-card-back {
+    transform: rotateY(180deg);
+}
+
+.direction .flip-card-inner:hover {
+    transform: rotateY(180deg);
+}
+
+/* Navigation buttons */
+.direction .scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.5rem;
+    color: #333;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.direction .scroll-btn.prev-btn {
+    left: 0;
+}
+
+.direction .scroll-btn.next-btn {
+    right: 0;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .direction .flip-card {
+        display: none; /* Sembunyikan semua kartu */
+    }
+
+    .direction .flip-card.active {
+        display: flex; /* Tampilkan hanya kartu aktif */
+    }
+
+    .direction .scroll-btn {
+        display: block; /* Tampilkan tombol navigasi */
+    }
+}
+
+@media (min-width: 769px) {
+    .direction .flip-card {
+        display: flex; /* Tampilkan semua kartu */
+        /* Tata letak grid-like */
+        max-width: 300px;
+    }
+
+    .direction .scroll-btn {
+        display: none; /* Sembunyikan tombol navigasi */
+    }
+}
+
+/* Default styles for larger screens */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+.button-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.button {
+    background-color: #939191;
+    color: #f9f5f5;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+.button.active {
+    background-color: #ff5722;
+    color: #ffffff;
+}
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+.video-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.video-container iframe {
+    width: 80%;
+    height: 400px;
+    border: none;
+}
+
+/* Responsive styles for smaller screens (Mobile) */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column;  /* Stack buttons vertically */
+        align-items: center;
+    }
+    .button {
+        width: 100%;  /* Make buttons full-width on small screens */
+        margin: 10px 0;  /* Add spacing between buttons */
+        font-size: 14px;  /* Reduce font size on mobile */
+    }
+    .video-container iframe {
+        width: 100%;  /* Make the video container responsive */
+        height: auto;  /* Maintain aspect ratio */
+    }
+}
+
+@media (max-width: 480px) {
+    .button {
+        font-size: 12px;  /* Smaller font size for very small screens */
+        padding: 8px 16px;  /* Adjust padding for small screens */
+    }
+    .video-container iframe {
+        height: 250px;  /* Reduce video height for small screens */
+    }
+}
