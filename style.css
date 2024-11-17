@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     background-color: #ffffff;
-    color: #333;
+ 
 }
 body {
     margin-top: 20px; /* Sesuaikan dengan tinggi nav */
@@ -19,34 +19,82 @@ main {
     src: url('assets/Etna-Font/etna-free-font.otf') format('opentype');
 }
 
+.about p,.direction p{
+    font-family: 'Etna Sans Serif', sans-serif;
+    font-weight: normal;       /* Mengatur ketebalan font menjadi normal */
+    overflow: visible;         /* Pastikan teks tidak terpotong */
+    line-height: 1.4;          /* Menjaga jarak antar baris teks */
+    white-space: normal;       /* Pastikan teks bisa membungkus jika terlalu panjang */
+    word-wrap: break-word;     /* Memastikan kata panjang bisa terpotong dengan baik */
+    max-width: 100%; 
+    color: #696262;
+}
+p {
+    font-family: 'Etna Sans Serif', sans-serif;
+    font-weight: normal;       /* Mengatur ketebalan font menjadi normal */
+    overflow: visible;         /* Pastikan teks tidak terpotong */
+    line-height: 1.4;          /* Menjaga jarak antar baris teks */
+    white-space: normal;       /* Pastikan teks bisa membungkus jika terlalu panjang */
+    word-wrap: break-word;     /* Memastikan kata panjang bisa terpotong dengan baik */
+    max-width: 100%; 
+    color: #ece6e6;          /* Memastikan lebar tidak melebihi batas */
+}
+
 h2 {
     font-family: 'Etna Sans Serif', sans-serif;
     overflow: visible;      /* Pastikan teks tidak terpotong */
-    line-height: 1.6;       /* Menjaga jarak antar baris teks */
+    line-height: 1.4;       /* Menjaga jarak antar baris teks */
     white-space: normal;    /* Pastikan teks bisa membungkus jika terlalu panjang */
     word-wrap: break-word;  /* Memastikan kata panjang bisa terpotong dengan baik */
     max-width: 100%;        /* Pastikan lebar elemen cukup untuk menampung teks */
-    letter-spacing: 0.05em; /* Menambah jarak antar huruf */
-    word-spacing: 0.1em;    /* Menambah jarak antar kata */
 }
 
 
+* {
+    margin: 60;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: Arial, sans-serif;
+}
 
 nav {
-    background: linear-gradient(to right, #ff0000, #d37319);
+    background: rgba(79, 0, 0, 0.5);  /* Transparansi latar belakang navbar */
     color: white;
-    padding: 10px 20px;
+    padding: 10px 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
+    transition: background 0.3s ease, opacity 0.3s ease; /* Transisi halus */
 }
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+section.content {
+    padding-top: 80px;  /* Menyediakan ruang agar konten tidak tertutup navbar */
+    text-align: center;
+}
+
+
+
 
 nav .logo {
     font-size: 1.5em;
@@ -751,7 +799,7 @@ body {
 .flip-card-front i {
     font-size: 40px;
     margin-bottom: 10px;
-    color: #ff5722;
+    color: #4f0000;
 }
 
 .flip-card-front h3 {
@@ -767,7 +815,7 @@ body {
 
 /* Back side styles */
 .flip-card-back {
-    background-color: #ff5722;
+    background-color: #4f0000;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -831,10 +879,7 @@ body {
 }
 
 
-nav {
-    background-color: #333;
-    padding: 10px;
-  }
+
   
   .logo {
     font-size: 24px;
@@ -955,8 +1000,9 @@ nav {
 
 #splash-screen {
     background-image: 
-        url('assets/LOGO TRANSPARENT.png'), /* Gambar logo */
-        linear-gradient(to bottom, #560c03, #ffffff); /* Gradasi vertikal */
+ url('assets/LOGO TRANSPARENT.png');
+ background-color: black;/* Gambar logo */
+        /* linear-gradient(to bottom, #560c03, #ffffff); Gradasi vertikal */
     background-size: contain, cover; /* Menyesuaikan gambar logo agar muat dan menutupi latar belakang */
     background-position: center; /* Menyelaraskan gambar di tengah */
     background-repeat: no-repeat; /* Menghindari pengulangan gambar */
@@ -1220,7 +1266,7 @@ nav {
     transition: background-color 0.3s, color 0.3s;
 }
 .button.active {
-    background-color: #ff5722;
+    background-color: #4f0000;
     color: #ffffff;
 }
 .video-container {
