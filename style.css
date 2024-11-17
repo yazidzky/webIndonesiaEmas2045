@@ -284,13 +284,8 @@ header h1 {
 }
 
 .map:hover {
-    transform: scale(1.05); /* Zoom in saat dihover */
+    transform: scale(1.05); /* Menambahkan efek zoom-in */
     filter: brightness(1.1); /* Menambahkan efek kecerahan */
-}
-
-.map:active {
-    transform: scale(0.95); /* Zoom out saat diklik */
-    filter: brightness(1); /* Mengembalikan kecerahan */
 }
 
 /* Responsif untuk perangkat mobile */
