@@ -18,7 +18,10 @@ main {
     font-family: 'Etna Sans Serif';
     src: url('assets/Etna-Font/etna-free-font.otf') format('opentype');
 }
-
+.logo img {
+    width: 50px; /* Atur lebar sesuai keinginan */
+    height: auto; /* Menjaga proporsi gambar */
+  }
 .about p,.direction p{
     font-family: 'Etna Sans Serif', sans-serif;
     font-weight: normal;       /* Mengatur ketebalan font menjadi normal */
@@ -51,7 +54,7 @@ h2 {
 
 
 * {
-    margin: 60;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -63,7 +66,7 @@ body {
 nav {
     background: rgba(79, 0, 0, 0.5);  /* Transparansi latar belakang navbar */
     color: white;
-    padding: 10px 15px;
+    padding: 5px 10px;
     position: fixed;
     top: 0;
     left: 0;
@@ -79,7 +82,7 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 10px;
 }
 
 nav ul li a {
@@ -89,7 +92,7 @@ nav ul li a {
 }
 
 section.content {
-    padding-top: 80px;  /* Menyediakan ruang agar konten tidak tertutup navbar */
+    padding-top: 100px;  /* Menyediakan ruang agar konten tidak tertutup navbar */
     text-align: center;
 }
 
