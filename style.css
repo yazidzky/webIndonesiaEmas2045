@@ -525,10 +525,10 @@ header h1 {
     50% { box-shadow: 0 0 20px #ffcc00; }
     100% { box-shadow: 0 0 5px #ffcc00; }
 }
+
 @media (max-width: 1064px) {
     .pillars {
         display: flex;
-        flex-direction: column;
         align-items: center;
         width: 100%; /* Memastikan elemen pilar menyesuaikan lebar container */
     }
@@ -1078,27 +1078,7 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Efek bayangan gelap untuk menambah kontras */
 }
 
-.about .pillars-wrapper {
-    width: 100%; /* Pastikan kontainer menempati seluruh ruang */
-    overflow: hidden;
-    padding: 0 1rem;
-    box-sizing: border-box;
-  }
-  
-  .about .pillars {
-    display: flex;
-    flex-wrap: wrap; /* Pastikan elemen dapat membungkus ke baris berikutnya */
-    gap: 1rem; /* Beri jarak antar elemen */
-    width: 100%;
-  }
-  
-  .about .pillar {
-    flex: 1 1 300px; /* Tentukan lebar dasar elemen, sesuaikan sesuai kebutuhan */
-    min-width: 200px; /* Pastikan elemen dapat mengecil hingga lebar tertentu */
-    margin-bottom: 1rem;
-    box-sizing: border-box;
-  }
-  
+
 
 /* Default styling */
 .about .pillars-wrapper {
@@ -1142,7 +1122,7 @@ body {
   }
   
   /* Mobile-specific styles */
-  @media (max-width: 768px) {
+  @media (max-width: 1064px) {
     .about .pillar {
       flex: 1 1 100%;
     }
@@ -1158,7 +1138,7 @@ body {
 }
 
 /* Mobile-specific styles */
-@media (max-width: 768px) {
+@media (max-width: 1064px) {
   .about .pillar {
     display: none; /* Sembunyikan semua pilar */
   }
