@@ -280,6 +280,17 @@ header h1 {
     height: 600px; /* Anda bisa menggunakan vh untuk membuat tinggi lebih fleksibel */
     background: url('assets/MAP TRANSPARENT.png') no-repeat center center;
     background-size: cover; /* Pastikan gambar menutupi seluruh area */
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out, height 0.5s ease-in-out; /* Menambahkan transisi untuk efek halus */
+}
+
+.map:hover {
+    transform: scale(1.05); /* Zoom in saat dihover */
+    filter: brightness(1.1); /* Menambahkan efek kecerahan */
+}
+
+.map:active {
+    transform: scale(0.95); /* Zoom out saat diklik */
+    filter: brightness(1); /* Mengembalikan kecerahan */
 }
 
 /* Responsif untuk perangkat mobile */
@@ -288,6 +299,17 @@ header h1 {
         height: 400px; /* Menurunkan tinggi pada perangkat mobile */
         background-size: contain; /* Agar gambar sepenuhnya terlihat tanpa terpotong */
         background-position: center center; /* Memastikan gambar tetap terpusat */
+        transition: height 0.5s ease-in-out; /* Menambahkan transisi halus untuk perubahan ukuran */
+    }
+}
+
+/* Responsif untuk ukuran tepat di sekitar 769px */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .map {
+        height: 500px; /* Mengatur tinggi agar tidak terlalu besar di layar sedang */
+        background-size: contain; /* Menyesuaikan agar tidak memotong gambar */
+        background-position: center center;
+        transition: height 0.5s ease-in-out; /* Transisi halus */
     }
 }
 
@@ -297,8 +319,10 @@ header h1 {
         height: 300px; /* Mengurangi tinggi lebih lanjut untuk layar kecil */
         background-size: contain; /* Pastikan gambar sepenuhnya terlihat tanpa terpotong */
         background-position: center center; /* Menjaga gambar tetap terpusat */
+        transition: height 0.5s ease-in-out; /* Menambahkan transisi halus untuk perubahan ukuran */
     }
 }
+
 
 
 .FOOTER {
@@ -526,31 +550,6 @@ header h1 {
     100% { box-shadow: 0 0 5px #ffcc00; }
 }
 
-@media (max-width: 1064px) {
-    .pillars {
-        display: flex;
-        align-items: center;
-        width: 100%; /* Memastikan elemen pilar menyesuaikan lebar container */
-    }
-
-    .pillar {
-        width: 90%; /* Memberikan lebar fleksibel untuk pilar agar pas di layar */
-        margin-bottom: 20px; /* Jarak antar pilar agar lebih terlihat */
-    }
-
-    .pillars .pillar.active {
-        display: block; /* Pastikan pilar aktif terlihat */
-    }
-
-    .pillar img {
-        max-width: 100%; /* Menjaga gambar dalam pilar tetap responsif */
-        height: auto;
-    }
-
-    .pillar-content {
-        padding: 15px; /* Memberikan padding agar konten pilar tidak mepet */
-    }
-}
 
 /* Responsif Mobile */
 @media (max-width: 768px) {
