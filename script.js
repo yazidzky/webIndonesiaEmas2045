@@ -11,6 +11,8 @@ window.addEventListener('load', () => {
     }, 5000);  // Tunda selama 5 detik (3s animasi + 2s fade out)
 });
 
+
+
 document.querySelector('.map').addEventListener('click', function() {
   this.classList.toggle('active');
 });
@@ -236,9 +238,6 @@ window.addEventListener('scroll', function() {
       navbar.style.opacity = "1";  // Mengembalikan opacity ke normal
   }
 });
-
-
-
 
 
 // Fungsi untuk toggle efek flip pada kartu saat diklik
