@@ -18,9 +18,12 @@ main {
     font-family: 'Etna Sans Serif';
     src: url('assets/Etna-Font/etna-free-font.otf') format('opentype');
 }
-.logo img {
-    width: 50px; /* Atur lebar sesuai keinginan */
-    height: auto; /* Menjaga proporsi gambar */
+
+  .logo img {
+    margin-top: 0px; /* Small top margin */
+    margin-bottom: 0px;
+    height: 60px;
+    width: 60px;
   }
 .about p,.direction p{
     font-family: 'Etna Sans Serif', sans-serif;
@@ -204,6 +207,12 @@ header h1 {
     /* text-shadow: 0 -4px 8px rgba(0, 0, 0, 0.6); Bayangan ke atas */
 }
 
+/* Media Query for larger screens (laptops and up) */
+@media (min-width: 768px) {
+    .hero h2 {
+        font-size: 4em; /* Increase the font size on larger screens */
+    }
+}
 .about {
     padding: 50px 20px;
     text-align: center;
@@ -1048,7 +1057,7 @@ body {
 }
 
 #splash-screen {
-    background-image: url('assets/LOGO TRANSPARENT.png');
+    background-image: url('assets/LOGO.png');
     background-color: #4f0000; /* Warna latar belakang */
     background-size: contain; /* Menjaga ukuran gambar agar sesuai dan muat */
     background-position: center; /* Menempatkan gambar di tengah */
