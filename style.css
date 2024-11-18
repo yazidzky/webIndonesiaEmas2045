@@ -4606,20 +4606,27 @@ body {
     }
 }
 
+/* General styles for social media links */
 .social-media {
     margin-top: 20px;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+
 .social-media a {
     margin: 0 10px;
     color: #4f0000;
     font-size: 2em;
     transition: color 0.3s;
 }
+
 .social-media a:hover {
     color: #e6b800;
 }
 
+/* Contact section fade-in animation */
 .contact-section {
     opacity: 0;
     transform: translateY(20px);
@@ -4631,6 +4638,7 @@ body {
     transform: translateY(0);
 }
 
+/* Button styles */
 .social-btn {
     display: inline-flex;
     align-items: center;
@@ -4657,48 +4665,7 @@ body {
     transform: scale(0.95);
 }
 
-.social-media a {
-    margin-bottom: 10px;
-}
-
-@media (min-width: 1024px) {
-    .contact-section {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        align-items: center;
-    }
-    .social-media {
-        justify-self: end;
-        flex-direction: column;
-    }
-    .social-media a {
-        max-height: 40px;
-    }
-}
-
-
-.contact-section {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.animate-fade-in {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.social-btn:hover {
-    background-color: #333; /* Warna latar belakang saat hover */
-    color: #fff; /* Warna teks saat hover */
-    border-color: #333; /* Warna border saat hover */
-}
-
-.social-btn:active {
-    transform: scale(0.95); /* Efek klik */
-}
-
-/* Responsive design for larger screens */
+/* Larger screens (1024px and above) */
 @media (min-width: 1024px) {
     .contact-section {
         display: grid;
@@ -4707,9 +4674,10 @@ body {
         align-items: center;
     }
 
+    /* Social media links placed below content and displayed horizontally */
     .social-media {
-        justify-self: end;
-        flex-direction: column;
+        justify-self: start;
+        flex-direction: row;
     }
 
     .social-media a {
@@ -4718,7 +4686,7 @@ body {
     }
 }
 
-/* Responsive design for smaller screens */
+/* Smaller screens (767px and below) */
 @media (max-width: 767px) {
     .contact-section {
         padding: 20px;
@@ -4732,20 +4700,29 @@ body {
         min-width: 100%;
     }
 
+    .social-media {
+        flex-direction: column; /* Display vertically on mobile */
+        align-items: center;
+        justify-content: center;
+    }
+
     .social-media a {
         font-size: 1.5em;
         margin: 5px;
     }
 }
+
+/* Icon size adjustments */
 .contact-info i,
 .social-btn i {
-    font-size: 1em; /* Menyesuaikan dengan ukuran font button */
+    font-size: 1em;
 }
 
-/* Menambahkan font-size di button agar elemen <i> menyesuaikan */
+/* Font size adjustment for social-btn button */
 .social-btn {
-    font-size: 1em; /* Mengontrol ukuran elemen dalam button */
+    font-size: 1em;
 }
+
 
 
 .contact-section {
