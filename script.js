@@ -10,6 +10,10 @@ window.addEventListener('load', () => {
         document.getElementById('navbar').style.transition = 'opacity 1s'; // Smooth transition saat navbar muncul
     }, 5000);  // Tunda selama 5 detik (3s animasi + 2s fade out)
 });
+
+document.querySelector('.map').addEventListener('click', function() {
+  this.classList.toggle('active');
+});
 // Fungsi untuk toggle menu dan tombol hamburger
 function toggleMenu() {
     const menu = document.querySelector('.navbar-menu');
@@ -19,6 +23,7 @@ function toggleMenu() {
     menu.classList.toggle('active');
     hamburger.classList.toggle('active');
 }
+
 
 
 function toggleMenu() {
@@ -96,7 +101,7 @@ function updateTargets(indexChange) {
 window.addEventListener('resize', () => {
   const pillars = document.querySelectorAll('.pillar');
 
-  if (window.innerWidth > 1064) {
+  if (window.innerWidth > 1065) {
     // Tampilkan semua pilar di desktop
     pillars.forEach(pillar => pillar.classList.add('active'));
   } else {
